@@ -11,7 +11,8 @@ namespace Entities
 			{
 				Name = "Default user",
 				Email = "me@someone.com",
-				Password = "12345"
+				Password = "12345",
+				Avatar = ""
 			});
 
 			context.Categories.Add(new CategoriesEntity
