@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace sharp_blog.Models
+namespace Entities.Models
 {
-	public class Category
+	[Table("Categories")]
+	public class CategoryEntity
 	{
 		public int ID { get; set; }
 
@@ -11,6 +13,6 @@ namespace sharp_blog.Models
 		[StringLength(200)]
 		public string Name { get; set; }
 
-		public virtual ICollection<Post> Posts { get; set; }
+		public virtual ICollection<PostEntity> Posts { get; set; }
 	}
 }

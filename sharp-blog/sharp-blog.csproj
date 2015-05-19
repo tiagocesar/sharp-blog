@@ -120,16 +120,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505140526065_Initial.cs" />
-    <Compile Include="Migrations\201505140526065_Initial.Designer.cs">
-      <DependentUpon>201505140526065_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Comment.cs" />
-    <Compile Include="Models\Post.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Models\_Context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -163,9 +153,14 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505140526065_Initial.resx">
-      <DependentUpon>201505140526065_Initial.cs</DependentUpon>
-    </EmbeddedResource>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{7cecbac9-9938-4a8d-ab18-f9dd80803384}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{83f30171-4604-4b44-8966-fbc2e43e54f9}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

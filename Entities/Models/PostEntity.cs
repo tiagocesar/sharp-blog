@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace sharp_blog.Models
+namespace Entities.Models
 {
-	public class Post
+	[Table("Posts")]
+	public class PostEntity
 	{
 		public int ID { get; set; }
 		public int UserID { get; set; }
@@ -23,11 +25,11 @@ namespace sharp_blog.Models
 		[Required]
 		public string Content { get; set; }
 
-		public virtual User User { get; set; }
-		public virtual Category Category { get; set; }
-		public virtual ICollection<Comment> Comments { get; set; }
+		public virtual UserEntity User { get; set; }
+		public virtual CategoryEntity Category { get; set; }
+		public virtual ICollection<CommentEntity> Comments { get; set; }
 
-		public Post()
+		public PostEntity()
 		{
 			this.DatePublished = DateTime.Now;
 			this.Visible = false;

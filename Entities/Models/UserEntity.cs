@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace sharp_blog.Models
+namespace Entities.Models
 {
-	public class User
+	[Table("Users")]
+	public class UserEntity
 	{
 		public int ID { get; set; }
 		
@@ -21,7 +23,7 @@ namespace sharp_blog.Models
 		[Required]
 		public string Avatar { get; set; }
 
-		public virtual ICollection<Post> Posts { get; set; }
-		public virtual ICollection<Comment> Comments { get; set; }
+		public virtual ICollection<PostEntity> Posts { get; set; }
+		public virtual ICollection<CommentEntity> Comments { get; set; }
 	}
 }

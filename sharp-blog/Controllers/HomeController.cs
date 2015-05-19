@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Business.BLL;
 
 namespace sharp_blog.Controllers
 {
@@ -10,7 +11,9 @@ namespace sharp_blog.Controllers
 	{
 		public ActionResult Index()
 		{
-			return View();
+			var posts = PostBusiness.List();
+
+			return View(posts);
 		}
 	}
 }
