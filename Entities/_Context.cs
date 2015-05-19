@@ -13,7 +13,7 @@ namespace Entities
 
 		public BlogContext() : base("SharpBlog")
 		{
-			Database.SetInitializer<BlogContext>(new CreateDatabaseIfNotExists<BlogContext>());
+			Database.SetInitializer<BlogContext>(new DBInitializer());
 		}
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
