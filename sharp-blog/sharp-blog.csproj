@@ -133,6 +133,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Front\css\font-awesome.min.css" />
+    <Content Include="Front\css\layers.min.css" />
+    <Content Include="Front\css\style.css" />
+    <Content Include="Front\img\AjaxLoader.gif" />
+    <Content Include="Front\img\grabbing.png" />
+    <Content Include="Front\img\marker.png" />
+    <Content Include="Front\img\placeholder.jpg" />
+    <Content Include="Front\js\beetle.js" />
+    <Content Include="Front\js\plugins.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
